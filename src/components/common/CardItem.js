@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 
 
 const CardItem = (props) => (
-        <View style={styles.containerStyle}>
+        <View style={[styles.containerStyle, props.style]}>
             {props.children}
         </View>
     );
@@ -11,7 +11,7 @@ const CardItem = (props) => (
 const styles = StyleSheet.create({
     containerStyle: {
         borderBottomWidth: 1,
-        padding: 1,
+        padding: 5,
         backgroundColor: '#fff',
         justifyContent: 'flex-start',
         flexDirection: 'row',

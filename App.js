@@ -6,12 +6,10 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './src/reducers';
 import firebase from 'firebase';
 import Router from './src/Router';
-import firebaseConfig from './firebaseConfig.json';
 
 export default class App extends React.Component {
   componentWillMount(){
     const config = require('./firebaseConfig.json');
-    console.log('raw data ', config[0]);
     firebase.initializeApp(config[0]);
   }
   
